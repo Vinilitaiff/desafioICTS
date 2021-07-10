@@ -1,0 +1,85 @@
+{
+  "openapi": "3.0.0",
+  "info":{
+    "title":"DesafioICTS Documentation",
+    "description": "This is an API - DesafioICTS - Vinicius Vasconcelos",
+    "version":"1.0.0",
+    "contact": {
+      "email": "vinicius_vcv@hotmail.com"
+    }
+  },
+ "paths":{
+   "/products":{
+     "post": {
+       "tags": ["Product"],
+       "summary":"Create a product",
+       "description": "Create a new product",
+       "requestBody":{
+        "content": {
+          "application/json":{
+            "schema":{
+              "type":"object",
+              "properties": {
+                "name":{
+                  "type":"string"
+                },
+                "description":{
+                  "type":"string"
+                },
+                "price":{
+                  "type":"number"
+                }               
+              }, 
+              "example":{
+                "name": "Product name sample",
+                "description": "Description name sample",
+                "price": 102900
+              }
+            }
+          }
+        }
+       },
+       "responses": {
+         "201":{
+           "description": "Created"
+         },
+         "500":{
+          "description": "Product already exists"
+        }
+       }
+     },
+     "get":{
+       "tags":["Product"],
+       "summary": "List all products",
+       "description": "List all product",
+       "responses": {
+         "200":{
+           "description": "Success",
+           "content": {
+             "application/json":{
+               "schema":{
+                 "type":"array",
+                 "items":{
+                   "type":"object",
+                   "properties":{
+                     "name":{
+                       "type":"string"
+                     },                     
+                     "description":{
+                       "type":"string"
+                     },
+                     "price":{
+                      "type":"number"
+                    }
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }      
+     }
+   }
+ }
+
+}

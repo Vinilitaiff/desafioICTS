@@ -1,0 +1,21 @@
+
+1. BackEnd
+
+cd backend
+
+Configurar parametros do banco MySQL no arquivo ormconfig.json na raiz do projeto
+
+yarn - Instalar as dependências
+
+yarn typeorm migration:run - Criar tabelas
+
+yarn dev - Executar o server
+
+
+2. FrontEnd
+
+cd frontend
+
+yarn - Instalar as dependências
+
+yarn start - Executar o localhost:3000
