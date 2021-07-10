@@ -32,6 +32,11 @@
 
   # Inicie a aplicação web
   $ cd frontend
+
+  # Instale as dependências
+  $ yarn
+
+   # Inicie a Frontend
   $ yarn start
 
 ```
