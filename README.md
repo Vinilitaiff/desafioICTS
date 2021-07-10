@@ -21,6 +21,9 @@
 2. Executando a Aplicação:
 
 ```sh
+ # Inicie o backend
+  $ cd backend
+
   # Instale as dependências
   $ yarn
 
